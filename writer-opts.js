@@ -62,29 +62,29 @@ function getWriterOpts() {
 
       if (emojis) {
         if (commit.type === `feat`) {
-          commit.type = `:sparkles: Features`
+          commit.type = `✨ Features`
         } else if (commit.type === `fix`) {
-          commit.type = `:bug: Bug Fixes`
+          commit.type = `🐛 Bug Fixes`
         } else if (commit.type === `perf`) {
-          commit.type = `:zap: Performance Improvements`
+          commit.type = `⚡ Performance Improvements`
         } else if (commit.type === `revert`) {
-          commit.type = `:rewind: Reverts`
+          commit.type = `⏪ Reverts`
+        } else if (commit.type === `docs`) {
+          commit.type = `📝 Documentation`
+        } else if (commit.type === `style`) {
+          commit.type = `💄 Styles`
+        } else if (commit.type === `refactor`) {
+          commit.type = `♻ Code Refactoring`
+        } else if (commit.type === `test`) {
+          commit.type = `✅ Tests`
+        } else if (commit.type === `build`) {
+          commit.type = `👷‍ Build System`
+        } else if (commit.type === `ci`) {
+          commit.type = `🔧 Continuous Integration`
+        } else if (commit.type === 'chore') {
+          commit.type = '🎫 Chores'
         } else if (discard) {
           return
-        } else if (commit.type === `docs`) {
-          commit.type = `:memo: Documentation`
-        } else if (commit.type === `style`) {
-          commit.type = `:lipstick: Styles`
-        } else if (commit.type === `refactor`) {
-          commit.type = `:recycle: Code Refactoring`
-        } else if (commit.type === `test`) {
-          commit.type = `:white_check_mark: Tests`
-        } else if (commit.type === `build`) {
-          commit.type = `:construction_worker: Build System`
-        } else if (commit.type === `ci`) {
-          commit.type = `:wrench: Continuous Integration`
-        } else if (commit.type === 'chore') {
-          commit.type = ':ticket: Chores'
         }
       } else {
         if (commit.type === `feat`) {
@@ -95,8 +95,6 @@ function getWriterOpts() {
           commit.type = `Performance Improvements`
         } else if (commit.type === `revert`) {
           commit.type = `Reverts`
-        } else if (discard) {
-          return
         } else if (commit.type === `docs`) {
           commit.type = `Documentation`
         } else if (commit.type === `style`) {
@@ -111,6 +109,8 @@ function getWriterOpts() {
           commit.type = `Continuous Integration`
         } else if (commit.type === 'chore') {
           commit.type = 'Chores'
+        } else if (discard) {
+          return
         }
       }
 
