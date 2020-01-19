@@ -1,6 +1,6 @@
 <h1 align="center">conventional-changelog-custom-config</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-0.3.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/ITxiaohao/conventional-changelog-custom-config#readme">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
@@ -83,17 +83,17 @@ Type: `boolean` Default: `false`
 
 | Commit Type | Title                    | Description                                                                                                 | Emojis |
 | ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- | ------ |
-| `feat`      | Features                 | A new feature                                                                                               | ✨     |
+| `feat`      | Features                 | A new feature                                                                                               | ✨      |
 | `fix`       | Bug Fixes                | A bug Fix                                                                                                   | 🐛     |
 | `docs`      | Documentation            | Documentation only changes                                                                                  | 📝     |
 | `style`     | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      | 💄     |
 | `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   | ♻️     |
-| `perf`      | Performance Improvements | A code change that improves performance                                                                     | ⚡️    |
-| `test`      | Tests                    | Adding missing tests or correcting existing tests                                                           | ✅     |
+| `perf`      | Performance Improvements | A code change that improves performance                                                                     | ⚡️     |
+| `test`      | Tests                    | Adding missing tests or correcting existing tests                                                           | ✅      |
 | `build`     | Build                    | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         | 👷     |
 | `ci`        | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) | 🔧     |
 | `chore`     | Chores                   | Other changes that don't modify src or test files                                                           | 🎫     |
-| `revert`    | Reverts                  | Reverts a previous commit                                                                                   | ⏪     |
+| `revert`    | Reverts                  | Reverts a previous commit                                                                                   | ⏪      |
 
 **authorName**
 
