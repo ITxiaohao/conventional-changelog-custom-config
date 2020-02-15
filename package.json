@@ -1,6 +1,6 @@
 {
   "name": "@cao-mei-you-ren/conventional-changelog-custom-config",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "This preset extends the angular preset",
   "main": "index.js",
   "scripts": {
