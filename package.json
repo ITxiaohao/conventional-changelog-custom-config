@@ -1,5 +1,5 @@
 {
-  "name": "@cao-mei-you-ren/conventional-changelog-custom-config",
+  "name": "conventional-changelog-cmyr-config",
   "version": "0.4.0-beta",
   "description": "This preset extends the angular preset",
   "main": "index.js",
