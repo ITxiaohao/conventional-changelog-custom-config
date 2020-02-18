@@ -5,7 +5,7 @@ const Q = require(`q`)
 const readFile = Q.denodeify(require(`fs`).readFile)
 const resolve = require(`path`).resolve
 const path = require('path')
-
+const debug = require('debug')('conventional-changelog:cmyr-config"')
 // 自定义配置
 let pkgJson = {}
 try {
@@ -17,10 +17,10 @@ try {
 const { changelog } = pkgJson
 let bugsUrl = changelog ? changelog.bugsUrl || false : false
 if (typeof bugsUrl !== 'string') bugsUrl = false
-let emojis = changelog ? changelog.emojis || false : false
+let emojis = changelog && Boolean(changelog.emojis)
 let authorName = changelog ? changelog.authorName || false : false
 let authorEmail = changelog ? changelog.authorEmail || false : false
-
+debug('emojis：%s', emojis)
 let gitUserInfo = ''
 if (authorName && authorEmail) {
   gitUserInfo = `by: **{{authorName}}** ({{authorEmail}})`
@@ -113,6 +113,7 @@ function getWriterOpts() {
           return
         }
       }
+      debug('commit.type ：%s', commit.type)
 
       if (commit.scope === `*`) {
         commit.scope = ``
