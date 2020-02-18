@@ -7,11 +7,13 @@
     "commit": "git add . && git-cz",
     "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 -n ./index.js",
     "release": "release-it",
-    "test-windows": "mocha --timeout 30000"
+    "test-windows": "mocha --timeout 30000",
+    "deploy-beta": "npm publish --tag beta",
+    "deploy": "npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CaoMeiYouRen/conventional-changelog-custom-config.git"
+    "url": "git+https://github.com/CaoMeiYouRen/conventional-changelog-cmyr-config.git"
   },
   "config": {
     "commitizen": {
@@ -28,9 +30,9 @@
   "author": "CaoMeiYouRen <caomeiyouren@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CaoMeiYouRen/conventional-changelog-custom-config/issues"
+    "url": "https://github.com/CaoMeiYouRen/conventional-changelog-cmyr-config/issues"
   },
-  "homepage": "https://github.com/CaoMeiYouRen/conventional-changelog-custom-config#readme",
+  "homepage": "https://github.com/CaoMeiYouRen/conventional-changelog-cmyr-config#readme",
   "devDependencies": {
     "better-than-before": "^1.0.0",
     "chai": "^4.2.0",
@@ -41,6 +43,7 @@
     "coveralls": "^3.0.4",
     "cz-conventional-changelog": "^2.1.0",
     "debug": "^4.1.1",
+    "defaults": "^1.0.3",
     "git-dummy-commit": "^1.3.0",
     "github-url-from-git": "^1.5.0",
     "istanbul": "^0.4.5",
@@ -52,8 +55,48 @@
     "through2": "^3.0.1"
   },
   "changelog": {
-    "emojis": true,
     "authorName": true,
-    "authorEmail": true
+    "authorEmail": true,
+    "settings": {
+      "feat": {
+        "title": "✨ 新功能"
+      },
+      "fix": {
+        "title": "🐛 Bug 修复"
+      },
+      "perf": {
+        "title": "⚡ 性能优化"
+      },
+      "revert": {
+        "title": "⏪ 回退"
+      },
+      "refactor": {
+        "title": "♻ 代码重构"
+      },
+      "docs": {
+        "title": "📝 文档",
+        "enable": false
+      },
+      "style": {
+        "title": "💄 风格",
+        "enable": false
+      },
+      "test": {
+        "title": "✅ 测试",
+        "enable": false
+      },
+      "build": {
+        "title": "👷‍ 构建",
+        "enable": false
+      },
+      "ci": {
+        "title": "🔧 CI 配置",
+        "enable": false
+      },
+      "chore": {
+        "title": "🎫 其他更新",
+        "enable": false
+      }
+    }
   }
 }
