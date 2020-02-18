@@ -13,59 +13,107 @@ try {
 } catch (err) {
     console.error('no root package.json found')
 }
+
+const { changelog } = pkgJson
+const en = {
+    feat: {
+        title: '✨ Features',
+        enable: true
+    },
+    fix: {
+        title: '🐛 Bug Fixes',
+        enable: true
+    },
+    perf: {
+        title: '⚡ Performance Improvements',
+        enable: true
+    },
+    revert: {
+        title: '⏪ Reverts',
+        enable: true
+    },
+    refactor: {
+        title: '♻ Code Refactoring',
+        enable: true
+    },
+    docs: {
+        title: '📝 Documentation',
+        enable: false
+    },
+    style: {
+        title: '💄 Styles',
+        enable: false
+    },
+    test: {
+        title: '✅ Tests',
+        enable: false
+    },
+    build: {
+        title: '👷‍ Build System',
+        enable: false
+    },
+    ci: {
+        title: '🔧 Continuous Integration',
+        enable: false
+    },
+    chore: {
+        title: '🎫 Chores',
+        enable: false
+    }
+}
+const zh = {
+    feat: {
+        title: '✨ 新功能',
+        enable: true
+    },
+    fix: {
+        title: '🐛 Bug 修复',
+        enable: true
+    },
+    perf: {
+        title: '⚡ 性能优化',
+        enable: true
+    },
+    revert: {
+        title: '⏪ 回退',
+        enable: true
+    },
+    refactor: {
+        title: '♻ 代码重构',
+        enable: true
+    },
+    docs: {
+        title: '📝 文档',
+        enable: false
+    },
+    style: {
+        title: '💄 风格',
+        enable: false
+    },
+    test: {
+        title: '✅ 测试',
+        enable: false
+    },
+    build: {
+        title: '👷‍ 构建',
+        enable: false
+    },
+    ci: {
+        title: '🔧 CI 配置',
+        enable: false
+    },
+    chore: {
+        title: '🎫 其他更新',
+        enable: false
+    }
+}
+const _settings = /(zh|cn|Han)/i.test(changelog && changelog.language) ? zh : en
 const defaultOptions = {
     bugsUrl: false,
     authorName: false,
     authorEmail: false,
-    settings: {
-        feat: {
-            title: '✨ Features',
-            enable: true
-        },
-        fix: {
-            title: '🐛 Bug Fixes',
-            enable: true
-        },
-        perf: {
-            title: '⚡ Performance Improvements',
-            enable: true
-        },
-        revert: {
-            title: '⏪ Reverts',
-            enable: true
-        },
-        refactor: {
-            title: '♻ Code Refactoring',
-            enable: true
-        },
-        docs: {
-            title: '📝 Documentation',
-            enable: false
-        },
-        style: {
-            title: '💄 Styles',
-            enable: false
-        },
-        test: {
-            title: '✅ Tests',
-            enable: false
-        },
-        build: {
-            title: '👷‍ Build System',
-            enable: false
-        },
-        ci: {
-            title: '🔧 Continuous Integration',
-            enable: false
-        },
-        chore: {
-            title: '🎫 Chores',
-            enable: false
-        }
-    }
+    settings: _settings
 }
-const { changelog } = pkgJson
-
 const { bugsUrl, authorName, authorEmail, settings } = defaults(changelog, defaultOptions)
 
 let gitUserInfo = ''

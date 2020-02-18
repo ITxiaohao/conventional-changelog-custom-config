@@ -57,46 +57,6 @@
   "changelog": {
     "authorName": true,
     "authorEmail": true,
-    "settings": {
-      "feat": {
-        "title": "✨ 新功能"
-      },
-      "fix": {
-        "title": "🐛 Bug 修复"
-      },
-      "perf": {
-        "title": "⚡ 性能优化"
-      },
-      "revert": {
-        "title": "⏪ 回退"
-      },
-      "refactor": {
-        "title": "♻ 代码重构"
-      },
-      "docs": {
-        "title": "📝 文档",
-        "enable": false
-      },
-      "style": {
-        "title": "💄 风格",
-        "enable": false
-      },
-      "test": {
-        "title": "✅ 测试",
-        "enable": false
-      },
-      "build": {
-        "title": "👷‍ 构建",
-        "enable": false
-      },
-      "ci": {
-        "title": "🔧 CI 配置",
-        "enable": false
-      },
-      "chore": {
-        "title": "🎫 其他更新",
-        "enable": false
-      }
-    }
+    "language": "zh"
   }
 }
