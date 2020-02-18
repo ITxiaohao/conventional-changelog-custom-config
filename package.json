@@ -55,8 +55,6 @@
     "through2": "^3.0.1"
   },
   "changelog": {
-    "authorName": true,
-    "authorEmail": true,
     "language": "zh"
   }
 }
