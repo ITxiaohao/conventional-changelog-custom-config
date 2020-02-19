@@ -63,6 +63,7 @@ yarn add conventional-changelog-cmyr-config
     "bugsUrl": "https://redmine.example.com/issues/",
     "authorName": true,
     "authorEmail": true,
+    "language": "zh",//本项支持zh和en配置，默认为en，即生成英文changelog，配置后以下settings可省略。（但如果配置了settings会覆盖language的默认配置）
     "settings": {//cmyr-config新增功能，可自定义标题和是否启用某项
       "feat": {
         "title": "✨ 新功能",//定义标题
