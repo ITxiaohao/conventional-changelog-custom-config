@@ -61,53 +61,53 @@ function getWriterOpts() {
       })
 
       if (emojis) {
-        if (commit.type === `feat`) {
+        if ((commit.header).includes(`feat(`)) {
           commit.type = `✨ Features`
-        } else if (commit.type === `fix`) {
+        } else if ((commit.header).includes(`fix(`)) {
           commit.type = `🐛 Bug Fixes`
-        } else if (commit.type === `perf`) {
+        } else if ((commit.header).includes(`perf(`)) {
           commit.type = `⚡ Performance Improvements`
-        } else if (commit.type === `revert`) {
+        } else if ((commit.header).includes(`revert(`)) {
           commit.type = `⏪ Reverts`
-        } else if (commit.type === `docs`) {
+        } else if ((commit.header).includes(`docs(`)) {
           commit.type = `📝 Documentation`
-        } else if (commit.type === `style`) {
+        } else if ((commit.header).includes(`style(`)) {
           commit.type = `💄 Styles`
-        } else if (commit.type === `refactor`) {
+        } else if ((commit.header).includes(`refactor(`)) {
           commit.type = `♻ Code Refactoring`
-        } else if (commit.type === `test`) {
+        } else if ((commit.header).includes(`test(`)) {
           commit.type = `✅ Tests`
-        } else if (commit.type === `build`) {
+        } else if ((commit.header).includes(`build(`)) {
           commit.type = `👷‍ Build System`
-        } else if (commit.type === `ci`) {
+        } else if ((commit.header).includes(`ci(`)) {
           commit.type = `🔧 Continuous Integration`
-        } else if (commit.type === 'chore') {
+        } else if ((commit.header).includes('chore(')) {
           commit.type = '🎫 Chores'
         } else if (discard) {
           return
         }
       } else {
-        if (commit.type === `feat`) {
+        if ((commit.header).includes(`feat(`)) {
           commit.type = `Features`
-        } else if (commit.type === `fix`) {
+        } else if ((commit.header).includes(`fix(`)) {
           commit.type = `Bug Fixes`
-        } else if (commit.type === `perf`) {
+        } else if ((commit.header).includes(`perf(`)) {
           commit.type = `Performance Improvements`
-        } else if (commit.type === `revert`) {
+        } else if ((commit.header).includes(`revert(`)) {
           commit.type = `Reverts`
-        } else if (commit.type === `docs`) {
+        } else if ((commit.header).includes(`docs(`)) {
           commit.type = `Documentation`
-        } else if (commit.type === `style`) {
+        } else if ((commit.header).includes(`style(`)) {
           commit.type = `Styles`
-        } else if (commit.type === `refactor`) {
+        } else if ((commit.header).includes(`refactor(`)) {
           commit.type = `Code Refactoring`
-        } else if (commit.type === `test`) {
+        } else if ((commit.header).includes(`test(`)) {
           commit.type = `Tests`
-        } else if (commit.type === `build`) {
+        } else if ((commit.header).includes(`build(`)) {
           commit.type = `Build System`
-        } else if (commit.type === `ci`) {
+        } else if ((commit.header).includes(`ci(`)) {
           commit.type = `Continuous Integration`
-        } else if (commit.type === 'chore') {
+        } else if ((commit.header).includes('chore(')) {
           commit.type = 'Chores'
         } else if (discard) {
           return
